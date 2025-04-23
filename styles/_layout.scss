@@ -76,57 +76,102 @@ section {
 // --------------
 // Flex utilities
 // --------------
-.d-flex           { display: flex;          }
-.flex-column      { flex-direction: column; }
-.flex-row         { flex-direction: row;    }
-.flex-wrap        { flex-wrap: wrap;        }
-.align-center     { align-items: center;    }
-.justify-center   { justify-content: center;}
-.justify-between  { justify-content: space-between; }
-.justify-around   { justify-content: space-around;  }
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
 
 // --------------
 // Text alignment
 // --------------
-.text-center { text-align: center; }
-.text-left   { text-align: left;   }
-.text-right  { text-align: right;  }
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
 
 // --------------
 // Visibility
 // --------------
-.d-none    { display: none !important; }
-.visible   { visibility: visible;      }
-.invisible { visibility: hidden;       }
+.d-none {
+  display: none !important;
+}
 
-// -----------------
+.visible {
+  visibility: visible;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
 // Pagination styles
-// -----------------
 .pagination {
   @extend .d-flex;
   @extend .justify-center;
   gap: $spacing-2;
-  margin-top: $spacing-4;
+  margin-top: $spacing-5;
 
   .page-btn {
     min-width: 40px;
-    padding: 6px 12px;
+    height: 40px;
+    padding: 0;
     font-weight: $font-weight-semibold;
-    border: 1px solid $primary-color;
-    background: transparent;
-    color: $primary-color;
-    border-radius: $border-radius-sm;
+    border: 1px solid $gray-300;
+    background: $white;
+    color: $gray-700;
+    border-radius: 8px;
     cursor: pointer;
-    transition: $transition-base;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &:hover {
-      background: lighten($primary-color, 7%);
+      background: $primary-color;
+      border-color: $primary-color;
       color: $white;
+      box-shadow: 0 3px 8px rgba($primary-color, 0.25);
     }
 
     &.active {
       background: $primary-color;
+      border-color: $primary-color;
       color: $white;
+      box-shadow: 0 3px 8px rgba($primary-color, 0.25);
     }
   }
 }
