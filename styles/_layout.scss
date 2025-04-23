@@ -1,0 +1,132 @@
+// ======================
+// _layout.scss
+// ======================
+
+// Container
+.container {
+  width: 100%;
+  max-width: $container-max-width;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $container-padding;
+  padding-left: $container-padding;
+}
+
+// Section spacing
+section {
+  padding: $spacing-5 0;
+}
+
+// ----------------------
+// Section header styles
+// ----------------------
+.section-header {
+  text-align: center;
+  margin-bottom: $spacing-5;
+
+  .section-title {
+    font-size: $h2-font-size;
+    font-weight: $font-weight-bold;
+    margin-bottom: $spacing-2;
+    color: $dark-color;
+    position: relative;
+    padding-bottom: $spacing-3;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 4px;
+      background-color: $primary-color;
+    }
+  }
+
+  .section-subtitle {
+    color: $gray-600;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
+
+// --------------
+// Grid layouts
+// --------------
+.grid {
+  display: grid;
+  gap: $spacing-4;
+}
+
+.products__grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: $spacing-4;
+
+  @media (min-width: $breakpoint-sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+// --------------
+// Flex utilities
+// --------------
+.d-flex           { display: flex;          }
+.flex-column      { flex-direction: column; }
+.flex-row         { flex-direction: row;    }
+.flex-wrap        { flex-wrap: wrap;        }
+.align-center     { align-items: center;    }
+.justify-center   { justify-content: center;}
+.justify-between  { justify-content: space-between; }
+.justify-around   { justify-content: space-around;  }
+
+// --------------
+// Text alignment
+// --------------
+.text-center { text-align: center; }
+.text-left   { text-align: left;   }
+.text-right  { text-align: right;  }
+
+// --------------
+// Visibility
+// --------------
+.d-none    { display: none !important; }
+.visible   { visibility: visible;      }
+.invisible { visibility: hidden;       }
+
+// -----------------
+// Pagination styles
+// -----------------
+.pagination {
+  @extend .d-flex;
+  @extend .justify-center;
+  gap: $spacing-2;
+  margin-top: $spacing-4;
+
+  .page-btn {
+    min-width: 40px;
+    padding: 6px 12px;
+    font-weight: $font-weight-semibold;
+    border: 1px solid $primary-color;
+    background: transparent;
+    color: $primary-color;
+    border-radius: $border-radius-sm;
+    cursor: pointer;
+    transition: $transition-base;
+
+    &:hover {
+      background: lighten($primary-color, 7%);
+      color: $white;
+    }
+
+    &.active {
+      background: $primary-color;
+      color: $white;
+    }
+  }
+}

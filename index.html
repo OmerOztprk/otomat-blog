@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Otomat Çözümleri | Modern Otomat Sistemleri</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <div class="logo">
+            <a href="#"
+              ><img src="assets/images/logo.jpg" alt="Otomat Çözümleri Logo"
+            /></a>
+          </div>
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#home" class="nav__link">Ana Sayfa</a>
+              </li>
+              <li class="nav__item">
+                <a href="#products" class="nav__link">Ürünlerimiz</a>
+              </li>
+              <li class="nav__item">
+                <a href="#about" class="nav__link">Hakkımızda</a>
+              </li>
+              <li class="nav__item">
+                <a href="#contact" class="nav__link">İletişim</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero__content">
+          <h1 class="hero__title">Modern Otomat Çözümleri</h1>
+          <p class="hero__subtitle">
+            İşletmeniz için en yenilikçi ve verimli otomat sistemleri
+          </p>
+          <div class="hero__cta">
+            <a href="#products" class="btn btn--primary">Ürünleri Keşfet</a>
+            <a href="#contact" class="btn btn--secondary"
+              >Bizimle İletişime Geç</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="hero__image">
+        <img
+          src="assets/images/hero-otomat.jpg"
+          alt="Modern Otomat Sistemleri"
+        />
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Ürünlerimiz</h2>
+          <p class="section-subtitle">
+            İşletmenize ve müşterilerinize en uygun otomat çözümleri
+          </p>
+        </div>
+
+        <!-- Kategori Filtresi -->
+        <div class="product-filter">
+          <button class="filter-btn active" data-filter="all">Tümü</button>
+          <button class="filter-btn" data-filter="içecek">
+            İçecek Otomatları
+          </button>
+          <button class="filter-btn" data-filter="yiyecek">
+            Yiyecek Otomatları
+          </button>
+          <button class="filter-btn" data-filter="özel">Özel Çözümler</button>
+        </div>
+
+        <!-- Ürünler -->
+        <div class="products__grid" id="products-container">
+          <!-- Kartlar JS ile gelecek -->
+        </div>
+
+        <!-- Sayfalama -->
+        <nav
+          class="pagination"
+          id="pagination"
+          aria-label="Ürün sayfalama"
+        ></nav>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about__inner">
+          <div class="about__image">
+            <img src="assets/images/about-us.jpg" alt="Hakkımızda" />
+          </div>
+          <div class="about__content">
+            <h2 class="section-title">Hakkımızda</h2>
+            <p>
+              2010 yılından bu yana, otomat çözümleri alanında Türkiye'nin önde
+              gelen firmalarından biri olarak hizmet veriyoruz. Müşterilerimizin
+              ihtiyaçlarına uygun, yenilikçi ve kaliteli otomat sistemleri
+              sunmaktayız.
+            </p>
+            <p>
+              Amacımız, işletmelerin verimli ve karlı bir şekilde çalışmasını
+              sağlarken, son kullanıcıya da mükemmel bir deneyim sunmaktır.
+            </p>
+            <div class="about__features">
+              <div class="feature">
+                <i class="fas fa-medal"></i>
+                <h3>Kaliteli Ürünler</h3>
+                <p>
+                  Avrupa standartlarında üretilen dayanıklı ve uzun ömürlü
+                  otomatlar
+                </p>
+              </div>
+              <div class="feature">
+                <i class="fas fa-cogs"></i>
+                <h3>Teknik Destek</h3>
+                <p>7/24 teknik destek ve bakım hizmetleri</p>
+              </div>
+              <div class="feature">
+                <i class="fas fa-tasks"></i>
+                <h3>Özel Çözümler</h3>
+                <p>İşletmenizin ihtiyaçlarına özel tasarlanmış çözümler</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">İletişim</h2>
+          <p class="section-subtitle">
+            Bizimle iletişime geçin, ihtiyaçlarınızı birlikte değerlendirelim
+          </p>
+        </div>
+        <div class="contact__inner">
+          <div class="contact__info">
+            <div class="contact__item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div class="contact__text">
+                <h3>Adres</h3>
+                <p>Atatürk Cad. No:123, Bağcılar/İstanbul</p>
+              </div>
+            </div>
+            <div class="contact__item">
+              <i class="fas fa-phone-alt"></i>
+              <div class="contact__text">
+                <h3>Telefon</h3>
+                <p><a href="tel:+902123334455">+90 (212) 333 44 55</a></p>
+              </div>
+            </div>
+            <div class="contact__item">
+              <i class="fas fa-envelope"></i>
+              <div class="contact__text">
+                <h3>E-posta</h3>
+                <p>
+                  <a href="mailto:info@otomatcozumleri.com"
+                    >info@otomatcozumleri.com</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="social-media">
+              <a href="#" class="social-icon"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+          <div class="contact__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.2031648018647!2d28.830417511723194!3d40.99892621988103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa5d27b59b775%3A0x12eddd0d49280803!2zT3RvbWF0IFlhbsSxbWRhIE1ha2luZSBHxLFkYSBTQU4uIFTEsEMuIExEVC4gxZ5UxLAu!5e0!3m2!1str!2str!4v1745373333691!5m2!1str!2str"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__logo">
+            <img src="assets/images/logo.jpg" alt="Otomat Çözümleri Logo" />
+          </div>
+          <div class="footer__nav">
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="#home" class="footer__link">Ana Sayfa</a>
+              </li>
+              <li class="footer__item">
+                <a href="#products" class="footer__link">Ürünlerimiz</a>
+              </li>
+              <li class="footer__item">
+                <a href="#about" class="footer__link">Hakkımızda</a>
+              </li>
+              <li class="footer__item">
+                <a href="#contact" class="footer__link">İletişim</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p class="copyright">
+            &copy; 2025 Otomat Çözümleri. Tüm hakları saklıdır.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="scripts/data.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/ui.js"></script>
+  </body>
+</html>

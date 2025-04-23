@@ -1,0 +1,133 @@
+// Mobile menu (visible on smaller screens)
+@media (max-width: ($breakpoint-md - 1)) {
+    .mobile-menu {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: $white;
+      padding: $spacing-3 0;
+      box-shadow: 0 10px 15px rgba($black, 0.1);
+      transform: translateY(-100%);
+      opacity: 0;
+      visibility: hidden;
+      transition: $transition-base;
+      z-index: $z-index-fixed - 1;
+      
+      &.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+      
+      .nav__list {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .nav__item {
+        width: 100%;
+        text-align: center;
+      }
+      
+      .nav__link {
+        display: block;
+        padding: $spacing-2 0;
+      }
+    }
+  }
+  
+  // Hero section responsive
+  @media (max-width: ($breakpoint-lg - 1)) {
+    .hero {
+      &__content {
+        max-width: 100%;
+      }
+      
+      &__image {
+        opacity: 0.2;
+      }
+    }
+  }
+  
+  // About section responsive
+  @media (max-width: #{ $breakpoint-md - 1 }) {
+    .about {
+      &__inner {
+        grid-template-columns: 1fr;
+      }
+      
+      &__image {
+        order: 1;
+      }
+      
+      &__content {
+        order: 2;
+      }
+    }
+  }
+  
+  // Products responsive
+  @media (max-width: #{ $breakpoint-lg - 1 }) {
+    .products__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: #{ $breakpoint-sm - 1 }) {
+    .products__grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .product-filter {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  // Contact responsive
+  @media (max-width: #{ $breakpoint-md - 1 }) {
+    .contact {
+      &__inner {
+        grid-template-columns: 1fr;
+      }
+      
+      &__map {
+        height: 350px;
+      }
+    }
+  }
+  
+  // Footer responsive
+  @media (max-width: ($breakpoint-md - 1)) {
+    .footer {
+      &__inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      
+      &__logo {
+        margin-bottom: $spacing-3;
+      }
+    }
+  }
+  
+  // General responsive adjustments
+  @media (max-width: #{ $breakpoint-sm - 1 }) {
+    section {
+      padding: $spacing-4 0;
+    }
+    
+    .section-header {
+      margin-bottom: $spacing-4;
+    }
+    
+    h1, .h1 {
+      font-size: $h1-font-size * 0.7;
+    }
+    
+    h2, .h2 {
+      font-size: $h2-font-size * 0.8;
+    }
+  }
